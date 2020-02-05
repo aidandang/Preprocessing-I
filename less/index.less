@@ -57,3 +57,77 @@ html, body {
     height: 100%;
 }
 
+/* Main CSS started from here */
+
+/* Variables */
+.container-setup {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 20px 10% 20px 10%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	width: 100%;
+	background-color: black;
+	font-family: avenir;
+	color: white;
+}
+
+h1 {
+	font-size: 2.4rem;
+	padding-bottom: 5px;
+}
+
+.button {
+	display: inline-block;
+	text-decoration: none;
+	color: red;
+	letter-spacing: -0.1em;
+}
+
+.main-container {
+	height: 100%;
+}
+
+header {
+	.container-setup();
+
+	.logo {
+		font-size: 3.6rem;
+		font-weight: bold;
+		color: red;
+	}
+
+	nav {
+		display: flex;
+		flex-flow: column nowrap;
+		text-align: right;
+		line-height: 1.5;
+
+		a {
+			display: inline-block;
+			font-size: 1.6rem;
+			text-decoration: none;
+			color: white;
+
+			&:hover {
+				color: red;
+			}
+		}
+	}
+}
+
+.banner-container {
+	.container-setup();
+
+	p {
+		font-size: 6.0rem;
+	}
+}
+
