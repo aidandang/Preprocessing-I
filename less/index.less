@@ -60,12 +60,13 @@ html, body {
 /* Main CSS started from here */
 
 /* Variables */
-.container-setup {
+
+.container-setup(@t-padding, @r-padding, @b-padding, @l-padding) {
 	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	padding: 20px 10% 20px 10%;
+	padding: @t-padding @r-padding @b-padding @l-padding;
 }
 
 html {
@@ -96,7 +97,7 @@ h1 {
 }
 
 header {
-	.container-setup();
+	.container-setup(20px, 10%, 20px, 10%);
 
 	.logo {
 		font-size: 3.6rem;
@@ -124,10 +125,67 @@ header {
 }
 
 .banner-container {
-	.container-setup();
+	.container-setup(20px, 10%, 60px, 10%);
 
 	p {
 		font-size: 6.0rem;
+	}	
+}
+
+.skills-container {
+	.container-setup(20px, 10%, 60px, 30%);
+
+	p {
+		font-size: 2.4rem;
+		line-height: 1.5;
+	}	
+}
+
+.portfolio-container {
+	.container-setup(20px, 0, 60px, 0);
+
+	.banner {
+		display: flex;
+		justify-content: flex-start;
+
+		img {
+			display: inline-block;
+			width: 50%;
+		}
+		
+		div {
+			width: 40%;
+			padding-left: 20%;
+			p {
+				font-size: 3.6rem;
+				line-height: 1.5;
+			}	
+		}
 	}
 }
+
+footer {
+	.container-setup(20px, 10%, 60px, 10%);
+
+	nav {
+		display: flex;
+		flex-flow: column nowrap;
+		text-align: left;
+		line-height: 1.5;
+
+		a {
+			display: inline-block;
+			font-size: 2.4rem;
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+	.copyright {
+		font-size: 1.6rem;
+	}
+}
+
+
+
 
